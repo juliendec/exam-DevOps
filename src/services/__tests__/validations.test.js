@@ -22,6 +22,14 @@ describe("validations tests suites - isEmpty", () => {
 describe("validations tests suites - isMinLenght", () => {
     test("should return true as the label is less that 8 carac.", () => {
         const result = isMinLenght();
+        expect(result).toBe(false);
+    });
+    test("should return true as the label is less that 8 carac.", () => {
+        const result = isMinLenght("GamerTag89");
         expect(result).toBe(true);
+    });
+    test("should return true as the label is less that 8 carac.", () => {
+        const result = isMinLenght("");
+        expect(result).toBe(false);
     });
 });
