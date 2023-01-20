@@ -1,4 +1,4 @@
-const { isEmpty, isMinLenght } = require("../validations");
+const { isEmpty, isMinLenght, haveSpecialChar } = require("../validations");
 
 describe("validations tests suites - isEmpty", () => {
     test("should return true as the label is undefined", () => {
@@ -41,6 +41,10 @@ describe("validations tests suites - haveSpecialChar", () => {
     });
     test("should return false as the label don't have a special char.", () => {
         const result = haveSpecialChar("gamersansrien");
+        expect(result).toBe(false);
+    });
+    test("should return false as the label is null and don't have a special char.", () => {
+        const result = haveSpecialChar();
         expect(result).toBe(false);
     });
 });

@@ -8,5 +8,12 @@ const isMinLenght = (label) => {
     return false;
 };
 
+const haveSpecialChar = (label) => {
+    if (!label) return false;
+    var format = /[!@#$%^&*]/;
+    return format.test(label);
+};
+
 exports.isEmpty = isEmpty;
 exports.isMinLenght = isMinLenght;
+exports.haveSpecialChar = haveSpecialChar;
