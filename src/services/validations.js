@@ -14,6 +14,13 @@ const haveSpecialChar = (label) => {
     return format.test(label);
 };
 
+const haveANumber = (label) => {
+    if (!label) return false;
+    var format = /[0-9]/;
+    return format.test(label);
+};
+
 exports.isEmpty = isEmpty;
 exports.isMinLenght = isMinLenght;
 exports.haveSpecialChar = haveSpecialChar;
+exports.haveANumber = haveANumber;
