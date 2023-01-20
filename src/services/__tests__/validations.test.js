@@ -1,4 +1,4 @@
-const { isEmpty } = require("../validations");
+const { isEmpty, isMinLenght } = require("../validations");
 
 describe("validations tests suites - isEmpty", () => {
     test("should return true as the label is undefined", () => {
@@ -18,3 +18,10 @@ describe("validations tests suites - isEmpty", () => {
 });
 
 // TODO: Create tests suite for validation function
+
+describe("validations tests suites - isMinLenght", () => {
+    test("should return true as the label is less that 8 carac.", () => {
+        const result = isMinLenght();
+        expect(result).toBe(true);
+    });
+});
