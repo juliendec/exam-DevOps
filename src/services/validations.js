@@ -3,8 +3,8 @@
 const isEmpty = (label) => !label || label.length === 0;
 
 const isMinLenght = (label) => {
-    if(!label) return false;
-    if(label.length > 8) return true;
+    if (!label) return false;
+    if (label.length > 8) return true;
     return false;
 };
 
