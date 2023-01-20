@@ -48,3 +48,18 @@ describe("validations tests suites - haveSpecialChar", () => {
         expect(result).toBe(false);
     });
 });
+
+describe("validations tests suites - haveANumber", () => {
+    test("should return true as the label have a number", () => {
+        const result = haveANumber("GamerTag@89");
+        expect(result).toBe(true);
+    });
+    test("should return false as the label don't have a number", () => {
+        const result = haveANumber("gamersansrien");
+        expect(result).toBe(false);
+    });
+    test("should return false as the label is null and don't have a number.", () => {
+        const result = haveANumber();
+        expect(result).toBe(false);
+    });
+});
